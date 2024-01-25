@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: Get de code
         uses: actions/checkout@v3
-      - name: Install NodeJS
+      - name: Install NodeJS ${{ matrix.node-version}} on ${{ matrix.operating-system }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
